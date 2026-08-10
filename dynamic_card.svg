@@ -238,7 +238,7 @@
     <text class="section-label" x="0" y="0">✦ ABOUT ME</text>
     <text class="main-title" x="0" y="26">Hi, I'm <tspan class="hero-name">Matteo Logozzi</tspan> 👋</text>
     <text class="sub-stats" x="0" y="58">
-      <tspan fill="#bac2de">Repos:</tspan> <tspan class="stat-val" fill="#89b4fa">10</tspan>
+      <tspan fill="#bac2de">Repos:</tspan> <tspan class="stat-val" fill="#89b4fa">9</tspan>
       <tspan fill="#585b70" dx="10">|</tspan> 
       <tspan fill="#bac2de" dx="10">Stars:</tspan> <tspan class="stat-val" fill="#f9e2af">0</tspan>
       <tspan fill="#585b70" dx="10">|</tspan> 
