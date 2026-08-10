@@ -36,11 +36,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add dynamic_card.svg projects_carousel.svg contribution_heatmap.svg walle_card.svg
-          if ! git diff --staged --quiet; then
-            git commit -m "Auto-update dynamic badges, projects carousel & heatmap [skip ci]"
-            git push
-          else
-            echo "No changes to commit"
-          fi
+          git status
+          git diff-index --quiet HEAD || (git commit -m "Auto-update dynamic badges, projects carousel & heatmap [skip ci]" && git push)
 
 
