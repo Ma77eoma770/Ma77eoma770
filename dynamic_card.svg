@@ -1,6 +1,5 @@
 <svg width="800" height="318" viewBox="0 0 800 318" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Font Google Interstellar / Futuristic Style -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Orbitron:wght@600;800&amp;display=swap');
     </style>
@@ -9,7 +8,6 @@
       <rect x="10" y="10" width="780" height="298" rx="20" />
     </clipPath>
 
-    <!-- Gradiente Bordo Interstellare (Catppuccin Mauve -> Pink -> Peach -> Sapphire) -->
     <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#cba6f7" />
       <stop offset="40%" stop-color="#f5c2e7" />
@@ -17,14 +15,12 @@
       <stop offset="100%" stop-color="#74c7ec" />
     </linearGradient>
 
-    <!-- Gradiente Testo Titolo Interstellare -->
     <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#f5c2e7" />
       <stop offset="50%" stop-color="#cba6f7" />
       <stop offset="100%" stop-color="#89b4fa" />
     </linearGradient>
 
-    <!-- Gradiente Separatore cosmico -->
     <linearGradient id="sep-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#313244" stop-opacity="0.1" />
       <stop offset="20%" stop-color="#cba6f7" stop-opacity="0.6" />
@@ -33,7 +29,6 @@
       <stop offset="100%" stop-color="#313244" stop-opacity="0.1" />
     </linearGradient>
 
-    <!-- Gradiente di sfondo Catppuccin Deep Space -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f0f17" />
       <stop offset="45%" stop-color="#181825" />
@@ -41,7 +36,6 @@
       <stop offset="100%" stop-color="#282338" />
     </linearGradient>
 
-    <!-- Gradienti per la stella cadente interstellare -->
     <linearGradient id="star-trail-1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#cba6f7" stop-opacity="0" />
       <stop offset="70%" stop-color="#f5c2e7" stop-opacity="0.6" />
@@ -54,7 +48,6 @@
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9" />
     </linearGradient>
 
-    <!-- Soft Glow Filter per elementi interstellari -->
     <filter id="glow-dot" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
       <feMerge>
@@ -125,8 +118,6 @@
       animation: loadBar 1.5s cubic-bezier(0.1, 1, 0.1, 1) forwards;
       filter: drop-shadow(0px 0px 2px rgba(203, 166, 247, 0.4));
     }
-
-    /* Animazione Stelle Brillanti dello Sfondo */
     @keyframes twinkle {
       0%, 100% { opacity: 0.12; transform: scale(0.8); }
       50% { opacity: 0.95; transform: scale(1.3); }
@@ -136,58 +127,25 @@
       transform-box: fill-box;
       transform-origin: center;
     }
-
-    /* Animazione Stella Cadente Minimale Rallentata */
     @keyframes shootingStar1 {
-      0% {
-        transform: translate(320px, -30px);
-        opacity: 0;
-      }
-      10% {
-        opacity: 0.95;
-      }
-      55% {
-        transform: translate(820px, 180px);
-        opacity: 0;
-      }
-      100% {
-        transform: translate(820px, 180px);
-        opacity: 0;
-      }
+      0% { transform: translate(320px, -30px); opacity: 0; }
+      10% { opacity: 0.95; }
+      55% { transform: translate(820px, 180px); opacity: 0; }
+      100% { transform: translate(820px, 180px); opacity: 0; }
     }
-
     @keyframes shootingStar2 {
-      0%, 40% {
-        transform: translate(250px, -40px);
-        opacity: 0;
-      }
-      50% {
-        opacity: 0.75;
-      }
-      85% {
-        transform: translate(750px, 190px);
-        opacity: 0;
-      }
-      100% {
-        transform: translate(750px, 190px);
-        opacity: 0;
-      }
+      0%, 40% { transform: translate(250px, -40px); opacity: 0; }
+      50% { opacity: 0.75; }
+      85% { transform: translate(750px, 190px); opacity: 0; }
+      100% { transform: translate(750px, 190px); opacity: 0; }
     }
-
-    .shooting-star-1 {
-      animation: shootingStar1 14s infinite ease-out;
-    }
-    .shooting-star-2 {
-      animation: shootingStar2 14s infinite ease-out;
-    }
+    .shooting-star-1 { animation: shootingStar1 14s infinite ease-out; }
+    .shooting-star-2 { animation: shootingStar2 14s infinite ease-out; }
   </style>
 
-  <!-- Sfondo dimensionato dinamicamente con i margini -->
   <rect class="card-bg" x="10" y="10" width="780" height="298" />
 
-  <!-- LIVELLO SFONDO ANIMATO (CIELO STELLATO E STELLE CADENTI MINIMALI PASSA DIETRO IL TESTO) -->
   <g clip-path="url(#card-clip)">
-    <!-- Cielo Stellato -->
     <circle class="star" cx="674" cy="77" r="0.8" fill="#cdd6f4" style="--duration: 2.7s; --delay: 0.8s;" />
     <circle class="star" cx="124" cy="64" r="1.6" fill="#cdd6f4" style="--duration: 2.1s; --delay: 0.3s;" />
     <circle class="star" cx="258" cy="278" r="1.6" fill="#cdd6f4" style="--duration: 3.4s; --delay: 2.5s;" />
@@ -219,21 +177,16 @@
     <circle class="star" cx="107" cy="268" r="1.9" fill="#cdd6f4" style="--duration: 4.4s; --delay: 1.9s;" />
     <circle class="star" cx="148" cy="85" r="1.7" fill="#cdd6f4" style="--duration: 4.4s; --delay: 0.6s;" />
     
-
-    <!-- Prima Stella Cadente Minimale -->
     <g class="shooting-star-1">
       <line x1="0" y1="0" x2="65" y2="32" stroke="url(#star-trail-1)" stroke-width="1.3" stroke-linecap="round" />
       <circle cx="65" cy="32" r="1.6" fill="#ffffff" />
     </g>
-
-    <!-- Seconda Stella Cadente Minimale -->
     <g class="shooting-star-2">
       <line x1="0" y1="0" x2="50" y2="25" stroke="url(#star-trail-2)" stroke-width="1.1" stroke-linecap="round" />
       <circle cx="50" cy="25" r="1.3" fill="#ffffff" />
     </g>
   </g>
 
-  <!-- CONTAINER 1: ABOUT ME -->
   <g transform="translate(42, 34)">
     <text class="section-label" x="0" y="0">✦ ABOUT ME</text>
     <text class="main-title" x="0" y="26">Hi, I'm <tspan class="hero-name">Matteo Logozzi</tspan> 👋</text>
@@ -246,14 +199,10 @@
     </text>
   </g>
 
-  <!-- LINEA DI SEPARAZIONE COSMICA CON SFUMATURA -->
   <line x1="42" y1="120" x2="758" y2="120" stroke="url(#sep-grad)" stroke-width="1.5" />
 
-  <!-- CONTAINER 2: LANGUAGE STACK -->
   <g transform="translate(42, 130)">
     <text class="section-label" x="0" y="0">✦ LANGUAGE STACK</text>
-
-    <!-- Lista delle skill posizionata in modo fluido sotto il titolo del container -->
     <g transform="translate(0, 18)">
       
     <g transform="translate(0, 0)">
@@ -273,11 +222,11 @@
     </g>
     
     <g transform="translate(0, 52)">
-      <circle cx="6" cy="7" r="4" fill="#cba6f7" filter="url(#glow-dot)" />
+      <circle cx="6" cy="7" r="4" fill="#a6e3a1" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">Vue</text>
       <text class="percentage" x="250" y="11">8%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 27px;" x="290" y="3" height="8" rx="4" fill="#cba6f7" width="0" />
+      <rect class="animated-bar" style="--target-width: 27px;" x="290" y="3" height="8" rx="4" fill="#a6e3a1" width="0" />
     </g>
     
     <g transform="translate(0, 78)">

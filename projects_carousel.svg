@@ -1,0 +1,297 @@
+<svg width="800" height="310" viewBox="0 0 800 310" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Orbitron:wght@600;800&amp;display=swap');
+    </style>
+
+    <clipPath id="carousel-clip">
+      <rect x="10" y="10" width="780" height="290" rx="20" />
+    </clipPath>
+
+    <clipPath id="viewport-clip">
+      <rect x="0" y="0" width="716" height="210" rx="16" />
+    </clipPath>
+
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cba6f7" />
+      <stop offset="40%" stop-color="#f5c2e7" />
+      <stop offset="75%" stop-color="#fab387" />
+      <stop offset="100%" stop-color="#74c7ec" />
+    </linearGradient>
+
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5c2e7" />
+      <stop offset="50%" stop-color="#cba6f7" />
+      <stop offset="100%" stop-color="#89b4fa" />
+    </linearGradient>
+
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f17" />
+      <stop offset="45%" stop-color="#181825" />
+      <stop offset="80%" stop-color="#1e1e2e" />
+      <stop offset="100%" stop-color="#282338" />
+    </linearGradient>
+
+    <linearGradient id="star-trail-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cba6f7" stop-opacity="0" />
+      <stop offset="70%" stop-color="#f5c2e7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .card-bg {
+      fill: url(#bg-grad);
+      stroke: url(#border-grad);
+      stroke-width: 1.75;
+      rx: 20px;
+    }
+    .section-label {
+      font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      fill: #f5e0dc;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      opacity: 0.9;
+    }
+    .project-title {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      fill: #cdd6f4;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+    }
+    .proj-desc {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      fill: #a6adc8;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    .badge-text {
+      font-family: 'Inter', sans-serif;
+      fill: #cdd6f4;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-icon {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .cta-text {
+      font-family: 'Orbitron', 'Inter', sans-serif;
+      fill: #cba6f7;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.12; transform: scale(0.8); }
+      50% { opacity: 0.95; transform: scale(1.3); }
+    }
+    .star {
+      animation: twinkle var(--duration, 3s) infinite ease-in-out var(--delay, 0s);
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    @keyframes shootingStarCarousel {
+      0% { transform: translate(280px, -20px); opacity: 0; }
+      15% { opacity: 0.9; }
+      60% { transform: translate(780px, 160px); opacity: 0; }
+      100% { transform: translate(780px, 160px); opacity: 0; }
+    }
+    .shooting-star { animation: shootingStarCarousel 12s infinite ease-out; }
+
+    @keyframes slideCarousel {
+      0%, 20% { transform: translateX(0px); }
+      25%, 45% { transform: translateX(-720px); }
+      50%, 70% { transform: translateX(-1440px); }
+      75%, 95% { transform: translateX(-2160px); }
+      100% { transform: translateX(0px); }
+    }
+    .carousel-track {
+      animation: slideCarousel 16s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+
+    @keyframes dot1 {
+      0%, 20%, 100% { fill: #cba6f7; opacity: 1; transform: scale(1.25); }
+      25%, 95% { fill: #585b70; opacity: 0.4; transform: scale(1); }
+    }
+    @keyframes dot2 {
+      0%, 20%, 70%, 100% { fill: #585b70; opacity: 0.4; transform: scale(1); }
+      25%, 45% { fill: #cba6f7; opacity: 1; transform: scale(1.25); }
+    }
+    @keyframes dot3 {
+      0%, 45%, 95%, 100% { fill: #585b70; opacity: 0.4; transform: scale(1); }
+      50%, 70% { fill: #cba6f7; opacity: 1; transform: scale(1.25); }
+    }
+    @keyframes dot4 {
+      0%, 70% { fill: #585b70; opacity: 0.4; transform: scale(1); }
+      75%, 95% { fill: #cba6f7; opacity: 1; transform: scale(1.25); }
+      100% { fill: #585b70; opacity: 0.4; transform: scale(1); }
+    }
+
+    .dot-1 { animation: dot1 16s infinite; transform-box: fill-box; transform-origin: center; }
+    .dot-2 { animation: dot2 16s infinite; transform-box: fill-box; transform-origin: center; }
+    .dot-3 { animation: dot3 16s infinite; transform-box: fill-box; transform-origin: center; }
+    .dot-4 { animation: dot4 16s infinite; transform-box: fill-box; transform-origin: center; }
+  </style>
+
+  <rect class="card-bg" x="10" y="10" width="780" height="290" />
+
+  <g clip-path="url(#carousel-clip)">
+    <circle class="star" cx="560" cy="236" r="2.0" fill="#cdd6f4" style="--duration: 4.4s; --delay: 2.3s;" />
+    <circle class="star" cx="726" cy="122" r="1.7" fill="#cdd6f4" style="--duration: 3.3s; --delay: 2.0s;" />
+    <circle class="star" cx="402" cy="244" r="1.9" fill="#cdd6f4" style="--duration: 3.4s; --delay: 0.7s;" />
+    <circle class="star" cx="85" cy="193" r="0.8" fill="#cdd6f4" style="--duration: 3.6s; --delay: 1.8s;" />
+    <circle class="star" cx="27" cy="56" r="1.6" fill="#cdd6f4" style="--duration: 2.6s; --delay: 0.2s;" />
+    <circle class="star" cx="52" cy="189" r="0.9" fill="#cdd6f4" style="--duration: 3.0s; --delay: 2.0s;" />
+    <circle class="star" cx="239" cy="87" r="1.7" fill="#cdd6f4" style="--duration: 4.3s; --delay: 1.7s;" />
+    <circle class="star" cx="268" cy="262" r="1.8" fill="#cdd6f4" style="--duration: 2.9s; --delay: 0.3s;" />
+    <circle class="star" cx="461" cy="201" r="1.3" fill="#cdd6f4" style="--duration: 3.4s; --delay: 2.2s;" />
+    <circle class="star" cx="709" cy="70" r="0.9" fill="#cdd6f4" style="--duration: 4.0s; --delay: 2.4s;" />
+    <circle class="star" cx="131" cy="147" r="1.0" fill="#cdd6f4" style="--duration: 3.6s; --delay: 0.4s;" />
+    <circle class="star" cx="207" cy="162" r="1.4" fill="#cdd6f4" style="--duration: 4.2s; --delay: 0.2s;" />
+    <circle class="star" cx="583" cy="70" r="0.9" fill="#cdd6f4" style="--duration: 4.5s; --delay: 2.5s;" />
+    <circle class="star" cx="115" cy="141" r="1.0" fill="#cdd6f4" style="--duration: 3.5s; --delay: 0.6s;" />
+    <circle class="star" cx="430" cy="50" r="1.0" fill="#cdd6f4" style="--duration: 2.5s; --delay: 1.2s;" />
+    <circle class="star" cx="485" cy="166" r="1.3" fill="#cdd6f4" style="--duration: 4.4s; --delay: 3.0s;" />
+    <circle class="star" cx="589" cy="269" r="1.0" fill="#cdd6f4" style="--duration: 3.1s; --delay: 2.9s;" />
+    <circle class="star" cx="613" cy="51" r="1.7" fill="#cdd6f4" style="--duration: 2.6s; --delay: 1.8s;" />
+    <circle class="star" cx="534" cy="100" r="0.9" fill="#cdd6f4" style="--duration: 3.5s; --delay: 2.6s;" />
+    <circle class="star" cx="90" cy="54" r="1.6" fill="#cdd6f4" style="--duration: 3.0s; --delay: 0.4s;" />
+    <circle class="star" cx="603" cy="146" r="1.5" fill="#cdd6f4" style="--duration: 2.6s; --delay: 0.2s;" />
+    <circle class="star" cx="693" cy="181" r="1.9" fill="#cdd6f4" style="--duration: 2.9s; --delay: 2.1s;" />
+    <circle class="star" cx="264" cy="155" r="1.3" fill="#cdd6f4" style="--duration: 3.8s; --delay: 0.9s;" />
+    <circle class="star" cx="343" cy="57" r="0.8" fill="#cdd6f4" style="--duration: 3.7s; --delay: 1.7s;" />
+    <circle class="star" cx="122" cy="57" r="1.4" fill="#cdd6f4" style="--duration: 3.5s; --delay: 0.4s;" />
+    
+    <g class="shooting-star">
+      <line x1="0" y1="0" x2="60" y2="30" stroke="url(#star-trail-1)" stroke-width="1.2" stroke-linecap="round" />
+      <circle cx="60" cy="30" r="1.5" fill="#ffffff" />
+    </g>
+  </g>
+
+  <g transform="translate(42, 34)">
+    <text class="section-label" x="0" y="0">✦ FEATURED PROJECTS</text>
+    <g transform="translate(670, -6)">
+      <circle class="dot-1" cx="0" cy="0" r="4.5" fill="#585b70" />
+      <circle class="dot-2" cx="14" cy="0" r="4.5" fill="#585b70" />
+      <circle class="dot-3" cx="28" cy="0" r="4.5" fill="#585b70" />
+      <circle class="dot-4" cx="42" cy="0" r="4.5" fill="#585b70" />
+    </g>
+  </g>
+
+  <g transform="translate(42, 58)" clip-path="url(#viewport-clip)">
+    <g class="carousel-track">
+      
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="716" height="210" rx="16" fill="#181825" fill-opacity="0.75" stroke="#313244" stroke-width="1.2" />
+      <g transform="translate(24, 34)">
+        <path d="M4 1.75C4 .783 4.783 0 5.75 0h8.5C15.217 0 16 .783 16 1.75v12.5c0 .098-.015.192-.042.281H16V17.25C16 18.217 15.217 19 14.25 19h-11A1.75 1.75 0 0 1 1.5 17.25V4.75C1.5 3.783 2.283 3 3.25 3H4V1.75Zm1.75 1.25a.25.25 0 0 0-.25.25V17.25c0 .138.112.25.25.25h11a.25.25 0 0 0 .25-.25V14.5H5.75A1.75 1.75 0 0 1 4 12.75V3H5.75ZM3.25 4.5a.25.25 0 0 0-.25.25v8c0 .138.112.25.25.25H4V4.5h-.75Z" fill="#cba6f7" transform="scale(1.2)" />
+        <text class="project-title" x="28" y="16">golfers</text>
+      </g>
+      <g transform="translate(370, 24)">
+        <rect x="0" y="0" width="105" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <circle cx="14" cy="13" r="4" fill="#cba6f7" />
+        <text class="badge-text" x="25" y="17">MiniZinc</text>
+        <rect x="113" y="0" width="75" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <text class="badge-icon" x="124" y="17" fill="#f9e2af">★</text>
+        <text class="badge-text" x="138" y="17">0</text>
+        <rect x="194" y="0" width="75" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <text class="badge-icon" x="205" y="17" fill="#89b4fa">⑂</text>
+        <text class="badge-text" x="219" y="17">0</text>
+      </g>
+      <line x1="24" y1="68" x2="692" y2="68" stroke="#313244" stroke-width="1" opacity="0.6" />
+      <text class="proj-desc" x="24" y="100">No description provided.</text>
+      <text class="proj-desc" x="24" y="124"></text>
+      <g transform="translate(24, 154)">
+        <rect x="0" y="0" width="165" height="30" rx="15" fill="url(#title-grad)" opacity="0.12" stroke="#cba6f7" stroke-width="1" />
+        <text class="cta-text" x="14" y="19">VIEW PROJECT →</text>
+      </g>
+    </g>
+    
+    <g transform="translate(720, 0)">
+      <rect x="0" y="0" width="716" height="210" rx="16" fill="#181825" fill-opacity="0.75" stroke="#313244" stroke-width="1.2" />
+      <g transform="translate(24, 34)">
+        <path d="M4 1.75C4 .783 4.783 0 5.75 0h8.5C15.217 0 16 .783 16 1.75v12.5c0 .098-.015.192-.042.281H16V17.25C16 18.217 15.217 19 14.25 19h-11A1.75 1.75 0 0 1 1.5 17.25V4.75C1.5 3.783 2.283 3 3.25 3H4V1.75Zm1.75 1.25a.25.25 0 0 0-.25.25V17.25c0 .138.112.25.25.25h11a.25.25 0 0 0 .25-.25V14.5H5.75A1.75 1.75 0 0 1 4 12.75V3H5.75ZM3.25 4.5a.25.25 0 0 0-.25.25v8c0 .138.112.25.25.25H4V4.5h-.75Z" fill="#cba6f7" transform="scale(1.2)" />
+        <text class="project-title" x="28" y="16">University_Notes</text>
+      </g>
+      <g transform="translate(370, 24)">
+        <rect x="0" y="0" width="105" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <circle cx="14" cy="13" r="4" fill="#89b4fa" />
+        <text class="badge-text" x="25" y="17">TypeScript</text>
+        <rect x="113" y="0" width="75" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <text class="badge-icon" x="124" y="17" fill="#f9e2af">★</text>
+        <text class="badge-text" x="138" y="17">0</text>
+        <rect x="194" y="0" width="75" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <text class="badge-icon" x="205" y="17" fill="#89b4fa">⑂</text>
+        <text class="badge-text" x="219" y="17">0</text>
+      </g>
+      <line x1="24" y1="68" x2="692" y2="68" stroke="#313244" stroke-width="1" opacity="0.6" />
+      <text class="proj-desc" x="24" y="100">No description provided.</text>
+      <text class="proj-desc" x="24" y="124"></text>
+      <g transform="translate(24, 154)">
+        <rect x="0" y="0" width="165" height="30" rx="15" fill="url(#title-grad)" opacity="0.12" stroke="#cba6f7" stroke-width="1" />
+        <text class="cta-text" x="14" y="19">VIEW PROJECT →</text>
+      </g>
+    </g>
+    
+    <g transform="translate(1440, 0)">
+      <rect x="0" y="0" width="716" height="210" rx="16" fill="#181825" fill-opacity="0.75" stroke="#313244" stroke-width="1.2" />
+      <g transform="translate(24, 34)">
+        <path d="M4 1.75C4 .783 4.783 0 5.75 0h8.5C15.217 0 16 .783 16 1.75v12.5c0 .098-.015.192-.042.281H16V17.25C16 18.217 15.217 19 14.25 19h-11A1.75 1.75 0 0 1 1.5 17.25V4.75C1.5 3.783 2.283 3 3.25 3H4V1.75Zm1.75 1.25a.25.25 0 0 0-.25.25V17.25c0 .138.112.25.25.25h11a.25.25 0 0 0 .25-.25V14.5H5.75A1.75 1.75 0 0 1 4 12.75V3H5.75ZM3.25 4.5a.25.25 0 0 0-.25.25v8c0 .138.112.25.25.25H4V4.5h-.75Z" fill="#cba6f7" transform="scale(1.2)" />
+        <text class="project-title" x="28" y="16">Sicurezza_proj</text>
+      </g>
+      <g transform="translate(370, 24)">
+        <rect x="0" y="0" width="105" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <circle cx="14" cy="13" r="4" fill="#cba6f7" />
+        <text class="badge-text" x="25" y="17">PHP</text>
+        <rect x="113" y="0" width="75" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <text class="badge-icon" x="124" y="17" fill="#f9e2af">★</text>
+        <text class="badge-text" x="138" y="17">0</text>
+        <rect x="194" y="0" width="75" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <text class="badge-icon" x="205" y="17" fill="#89b4fa">⑂</text>
+        <text class="badge-text" x="219" y="17">0</text>
+      </g>
+      <line x1="24" y1="68" x2="692" y2="68" stroke="#313244" stroke-width="1" opacity="0.6" />
+      <text class="proj-desc" x="24" y="100">No description provided.</text>
+      <text class="proj-desc" x="24" y="124"></text>
+      <g transform="translate(24, 154)">
+        <rect x="0" y="0" width="165" height="30" rx="15" fill="url(#title-grad)" opacity="0.12" stroke="#cba6f7" stroke-width="1" />
+        <text class="cta-text" x="14" y="19">VIEW PROJECT →</text>
+      </g>
+    </g>
+    
+    <g transform="translate(2160, 0)">
+      <rect x="0" y="0" width="716" height="210" rx="16" fill="#181825" fill-opacity="0.75" stroke="#313244" stroke-width="1.2" />
+      <g transform="translate(24, 34)">
+        <path d="M4 1.75C4 .783 4.783 0 5.75 0h8.5C15.217 0 16 .783 16 1.75v12.5c0 .098-.015.192-.042.281H16V17.25C16 18.217 15.217 19 14.25 19h-11A1.75 1.75 0 0 1 1.5 17.25V4.75C1.5 3.783 2.283 3 3.25 3H4V1.75Zm1.75 1.25a.25.25 0 0 0-.25.25V17.25c0 .138.112.25.25.25h11a.25.25 0 0 0 .25-.25V14.5H5.75A1.75 1.75 0 0 1 4 12.75V3H5.75ZM3.25 4.5a.25.25 0 0 0-.25.25v8c0 .138.112.25.25.25H4V4.5h-.75Z" fill="#cba6f7" transform="scale(1.2)" />
+        <text class="project-title" x="28" y="16">Quiz</text>
+      </g>
+      <g transform="translate(370, 24)">
+        <rect x="0" y="0" width="105" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <circle cx="14" cy="13" r="4" fill="#fab387" />
+        <text class="badge-text" x="25" y="17">HTML</text>
+        <rect x="113" y="0" width="75" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <text class="badge-icon" x="124" y="17" fill="#f9e2af">★</text>
+        <text class="badge-text" x="138" y="17">0</text>
+        <rect x="194" y="0" width="75" height="26" rx="13" fill="#1e1e2e" stroke="#313244" />
+        <text class="badge-icon" x="205" y="17" fill="#89b4fa">⑂</text>
+        <text class="badge-text" x="219" y="17">0</text>
+      </g>
+      <line x1="24" y1="68" x2="692" y2="68" stroke="#313244" stroke-width="1" opacity="0.6" />
+      <text class="proj-desc" x="24" y="100">No description provided.</text>
+      <text class="proj-desc" x="24" y="124"></text>
+      <g transform="translate(24, 154)">
+        <rect x="0" y="0" width="165" height="30" rx="15" fill="url(#title-grad)" opacity="0.12" stroke="#cba6f7" stroke-width="1" />
+        <text class="cta-text" x="14" y="19">VIEW PROJECT →</text>
+      </g>
+    </g>
+    
+    </g>
+  </g>
+</svg>
