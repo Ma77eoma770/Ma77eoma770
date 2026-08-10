@@ -8,11 +8,17 @@ on:
     - cron: '0 0 * * *' # Esegue ogni notte a mezzanotte
   workflow_dispatch:     # Ti permette di avviarlo manualmente da GitHub
 
+# Concede permessi di scrittura sul repository al bot di GitHub Actions
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -34,3 +40,4 @@ jobs:
           git add dynamic_card.svg
           git diff-index --quiet HEAD || git commit -m "Auto-update dynamic badge [skip ci]"
           git push
+
