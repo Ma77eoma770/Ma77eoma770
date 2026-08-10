@@ -601,10 +601,10 @@ carousel_svg_content = f"""<svg width="800" height="{carousel_height}" viewBox="
     }}
 
     @keyframes shootingStarCarousel {{
-      0% {{ transform: translate(280px, -20px); opacity: 0; }}
+      0% {{ transform: translate(780px, 20px); opacity: 0; }}
       15% {{ opacity: 0.9; }}
-      60% {{ transform: translate(780px, 160px); opacity: 0; }}
-      100% {{ transform: translate(780px, 160px); opacity: 0; }}
+      60% {{ transform: translate(400px, 300px); opacity: 0; }}
+      100% {{ transform: translate(400px, 300px); opacity: 0; }}
     }}
     .shooting-star {{ animation: shootingStarCarousel 12s infinite ease-out; }}
 
@@ -648,8 +648,8 @@ carousel_svg_content = f"""<svg width="800" height="{carousel_height}" viewBox="
   <g clip-path="url(#carousel-clip)">
     {carousel_stars_svg}
     <g class="shooting-star">
-      <line x1="0" y1="0" x2="60" y2="30" stroke="url(#star-trail-1)" stroke-width="1.2" stroke-linecap="round" />
-      <circle cx="60" cy="30" r="1.5" fill="#ffffff" />
+      <line x1="45" y1="-33" x2="0" y2="0" stroke="url(#star-trail-1)" stroke-width="1.2" stroke-linecap="round" />
+      <circle cx="0" cy="0" r="1.5" fill="#ffffff" />
     </g>
   </g>
 
@@ -1117,3 +1117,196 @@ with open("contribution_heatmap.svg", "w", encoding="utf-8") as f:
     f.write(heatmap_svg_content)
 
 print(f"[+] File 'contribution_heatmap.svg' generato con successo! Altezza totale: {heatmap_height}px")
+
+# ==========================================
+# GENERAZIONE CARD WALL-E SPAZIALE (walle_card.svg)
+# ==========================================
+print(f"[*] Avvio orchestrazione della Card WALL-E Spaziale...")
+
+walle_gif_path = "walle.gif"
+if os.path.exists(walle_gif_path):
+    import base64
+    with open(walle_gif_path, "rb") as gif_file:
+        walle_b64 = base64.b64encode(gif_file.read()).decode("utf-8")
+    walle_img_href = f"data:image/gif;base64,{walle_b64}"
+else:
+    print(f"[!] Warning: {walle_gif_path} non trovato!")
+    walle_img_href = ""
+
+# Generazione stelle casuali per lo sfondo di WALL-E
+walle_stars = []
+for _ in range(35):
+    sx = random.randint(20, 780)
+    sy = random.randint(20, 260)
+    r = random.uniform(0.6, 1.8)
+    dur = round(random.uniform(1.8, 4.0), 2)
+    delay = round(random.uniform(0, 3.0), 2)
+    color = random.choice(["#89b4fa", "#cba6f7", "#b4befe", "#f5c2e7", "#ffffff"])
+    walle_stars.append(f'<circle class="star" cx="{sx}" cy="{sy}" r="{r:.2f}" fill="{color}" style="--duration: {dur}s; --delay: {delay}s;" />')
+
+walle_stars_svg = "\n    ".join(walle_stars)
+
+walle_card_svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 280" width="100%" height="280">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap');
+      
+      .card-bg {{
+        fill: #11111b;
+        stroke: #313244;
+        stroke-width: 2;
+        rx: 16px;
+      }}
+      .badge-title {{
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        fill: #cba6f7;
+        letter-spacing: 1.5px;
+      }}
+      .badge-subtitle {{
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        fill: #a6adc8;
+      }}
+      .quote-text {{
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 600;
+        fill: #89b4fa;
+      }}
+      .hud-line {{
+        stroke: #cba6f7;
+        stroke-width: 1.5;
+        opacity: 0.6;
+      }}
+      .hud-accent {{
+        fill: #f5c2e7;
+      }}
+      @keyframes twinkle {{
+        0%, 100% {{ opacity: 0.15; transform: scale(0.8); }}
+        50% {{ opacity: 0.95; transform: scale(1.3); }}
+      }}
+      .star {{
+        animation: twinkle var(--duration, 3s) infinite ease-in-out var(--delay, 0s);
+        transform-box: fill-box;
+        transform-origin: center;
+      }}
+      @keyframes orbitScan {{
+        0% {{ transform: rotate(0deg); }}
+        100% {{ transform: rotate(360deg); }}
+      }}
+      .orbit-ring {{
+        animation: orbitScan 20s linear infinite;
+        transform-origin: 155px 140px;
+      }}
+      @keyframes floatAnim {{
+        0%, 100% {{ transform: translateY(0px); }}
+        50% {{ transform: translateY(-5px); }}
+      }}
+      .floating-group {{
+        animation: floatAnim 4s ease-in-out infinite;
+      }}
+    </style>
+
+    <!-- Filtri Glow per stile cosmico -->
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Gradienti per HUD -->
+    <linearGradient id="hud-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cba6f7" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#89b4fa" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#f5c2e7" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Porthole / Oblò Clip Path (cerchio perfetto per inquadrare WALL-E) -->
+    <clipPath id="porthole-clip">
+      <circle cx="155" cy="140" r="92" />
+    </clipPath>
+    <clipPath id="card-clip">
+      <rect x="10" y="10" width="780" height="260" rx="16" />
+    </clipPath>
+  </defs>
+
+  <!-- BACKGROUND CARD CON STELLE -->
+  <rect class="card-bg" x="10" y="10" width="780" height="260" />
+  
+  <g clip-path="url(#card-clip)">
+    {walle_stars_svg}
+  </g>
+
+  <!-- SEZIONE OBLÒ WALL-E (SINISTRA) -->
+  <g class="floating-group">
+    <!-- Neon Outer Ring -->
+    <circle cx="155" cy="140" r="102" fill="none" stroke="url(#hud-grad)" stroke-width="2" filter="url(#glow-purple)" opacity="0.7" />
+    <circle cx="155" cy="140" r="98" fill="#181825" stroke="#313244" stroke-width="3" />
+    
+    <!-- Anello di Scansione Orbital (Tratteggiato) -->
+    <circle class="orbit-ring" cx="155" cy="140" r="96" fill="none" stroke="#89b4fa" stroke-width="1.5" stroke-dasharray="8, 25, 4, 15" opacity="0.8" />
+
+    <!-- IMMAGINE GIF DI WALL-E CLIPPPATA NELL'OBLÒ -->
+    <g clip-path="url(#porthole-clip)">
+      <!-- Sfondo interno dell'oblò -->
+      <rect x="50" y="35" width="210" height="210" fill="#0d0e15" />
+      <!-- WALL-E GIF -->
+      <image href="{walle_img_href}" x="40" y="25" width="230" height="230" preserveAspectRatio="xMidYMid slice" />
+    </g>
+
+    <!-- Cornice Interna Vetrata Oblò HUD -->
+    <circle cx="155" cy="140" r="92" fill="none" stroke="#cba6f7" stroke-width="2.5" opacity="0.85" filter="url(#glow-cyan)" />
+
+    <!-- Dettagli Tattici HUD attorno all'oblò -->
+    <!-- Tacche agli angoli -->
+    <line x1="155" y1="36" x2="155" y2="44" stroke="#f5c2e7" stroke-width="2" />
+    <line x1="155" y1="236" x2="155" y2="244" stroke="#f5c2e7" stroke-width="2" />
+    <line x1="51" y1="140" x2="59" y2="140" stroke="#f5c2e7" stroke-width="2" />
+    <line x1="251" y1="140" x2="259" y2="140" stroke="#f5c2e7" stroke-width="2" />
+
+    <!-- Etichetta HUD vicino all'oblò -->
+    <rect x="110" y="234" width="90" height="18" rx="4" fill="#181825" stroke="#cba6f7" stroke-width="1" />
+    <text x="155" y="246" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#a6e3a1" letter-spacing="1">WALL-E // 01</text>
+  </g>
+
+  <!-- SEZIONE TESTO / PANNELLO DI BORDO (DESTRA) -->
+  <g transform="translate(290, 45)">
+    <!-- Header Badge -->
+    <text class="badge-title" x="0" y="15">✦ WALL•E // CODE COMPANION</text>
+    <text class="badge-subtitle" x="0" y="38">Solar-Powered Bug Compactor • 700 Years of Refactoring</text>
+
+    <!-- Separatore HUD -->
+    <line x1="0" y1="52" x2="460" y2="52" stroke="#313244" stroke-width="1.5" stroke-dasharray="6,4" />
+
+    <!-- Citazione / Messaggio -->
+    <text class="quote-text" x="0" y="82">"Pressing [Ctrl+S]... *happy robot noises* 🤖📦"</text>
+    
+    <!-- Descrizione / Status Box -->
+    <rect x="0" y="102" width="460" height="72" rx="10" fill="#181825" stroke="#313244" stroke-width="1.2" />
+    
+    <!-- Dettagli Status HUD -->
+    <g transform="translate(18, 124)">
+      <!-- Indicatore di stato verde -->
+      <circle cx="6" cy="6" r="4" fill="#a6e3a1" filter="url(#glow-cyan)" />
+      <text font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#cdd6f4" x="20" y="10">DIRECTIVE:</text>
+      <text font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#a6e3a1" x="96" y="10">COMPACT BUGS &amp; COLLECT CODE</text>
+
+      <circle cx="6" cy="30" r="4" fill="#89b4fa" />
+      <text font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#cdd6f4" x="20" y="34">BATTERY:</text>
+      <text font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#89b4fa" x="88" y="34">CHARGING VIA SOLAR PANELS &amp; TEA 🍵</text>
+    </g>
+  </g>
+</svg>
+"""
+
+with open("walle_card.svg", "w", encoding="utf-8") as f:
+    f.write(walle_card_svg_content)
+
+print(f"[+] File 'walle_card.svg' generato con successo!")

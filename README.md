@@ -9,3 +9,7 @@
 <p align="center">
   <img src="./contribution_heatmap.svg" alt="Galactic Contribution Heatmap" />
 </p>
+
+<p align="center">
+  <img src="./walle_card.svg" alt="Deep Space Companion WALL-E" />
+</p>

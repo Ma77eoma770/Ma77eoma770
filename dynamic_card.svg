@@ -208,17 +208,17 @@
     <g transform="translate(0, 0)">
       <circle cx="6" cy="7" r="4" fill="#89b4fa" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">TypeScript</text>
-      <text class="percentage" x="250" y="11">47%</text>
+      <text class="percentage" x="250" y="11">46%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 159px;" x="290" y="3" height="8" rx="4" fill="#89b4fa" width="0" />
+      <rect class="animated-bar" style="--target-width: 156px;" x="290" y="3" height="8" rx="4" fill="#89b4fa" width="0" />
     </g>
     
     <g transform="translate(0, 26)">
       <circle cx="6" cy="7" r="4" fill="#74c7ec" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">Python</text>
-      <text class="percentage" x="250" y="11">25%</text>
+      <text class="percentage" x="250" y="11">27%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 85px;" x="290" y="3" height="8" rx="4" fill="#74c7ec" width="0" />
+      <rect class="animated-bar" style="--target-width: 91px;" x="290" y="3" height="8" rx="4" fill="#74c7ec" width="0" />
     </g>
     
     <g transform="translate(0, 52)">

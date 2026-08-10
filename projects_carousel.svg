@@ -98,10 +98,10 @@
     }
 
     @keyframes shootingStarCarousel {
-      0% { transform: translate(280px, -20px); opacity: 0; }
+      0% { transform: translate(780px, 20px); opacity: 0; }
       15% { opacity: 0.9; }
-      60% { transform: translate(780px, 160px); opacity: 0; }
-      100% { transform: translate(780px, 160px); opacity: 0; }
+      60% { transform: translate(400px, 300px); opacity: 0; }
+      100% { transform: translate(400px, 300px); opacity: 0; }
     }
     .shooting-star { animation: shootingStarCarousel 12s infinite ease-out; }
 
@@ -170,8 +170,8 @@
     <circle class="star" cx="122" cy="57" r="1.4" fill="#cdd6f4" style="--duration: 3.5s; --delay: 0.4s;" />
     
     <g class="shooting-star">
-      <line x1="0" y1="0" x2="60" y2="30" stroke="url(#star-trail-1)" stroke-width="1.2" stroke-linecap="round" />
-      <circle cx="60" cy="30" r="1.5" fill="#ffffff" />
+      <line x1="45" y1="-33" x2="0" y2="0" stroke="url(#star-trail-1)" stroke-width="1.2" stroke-linecap="round" />
+      <circle cx="0" cy="0" r="1.5" fill="#ffffff" />
     </g>
   </g>
 
