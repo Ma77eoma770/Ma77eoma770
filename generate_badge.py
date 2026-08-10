@@ -386,19 +386,26 @@ badge_svg_content = f"""<svg width="800" height="{svg_height}" viewBox="0 0 800 
       transform-origin: center;
     }}
     @keyframes shootingStar1 {{
-      0% {{ transform: translate(320px, -30px); opacity: 0; }}
+      0% {{ transform: translate(120px, -40px); opacity: 0; }}
       10% {{ opacity: 0.95; }}
-      55% {{ transform: translate(820px, 180px); opacity: 0; }}
-      100% {{ transform: translate(820px, 180px); opacity: 0; }}
+      45% {{ transform: translate(620px, 210px); opacity: 0; }}
+      100% {{ transform: translate(620px, 210px); opacity: 0; }}
     }}
     @keyframes shootingStar2 {{
-      0%, 40% {{ transform: translate(250px, -40px); opacity: 0; }}
-      50% {{ opacity: 0.75; }}
-      85% {{ transform: translate(750px, 190px); opacity: 0; }}
-      100% {{ transform: translate(750px, 190px); opacity: 0; }}
+      0%, 30% {{ transform: translate(350px, -40px); opacity: 0; }}
+      40% {{ opacity: 0.85; }}
+      75% {{ transform: translate(850px, 210px); opacity: 0; }}
+      100% {{ transform: translate(850px, 210px); opacity: 0; }}
     }}
-    .shooting-star-1 {{ animation: shootingStar1 14s infinite ease-out; }}
-    .shooting-star-2 {{ animation: shootingStar2 14s infinite ease-out; }}
+    @keyframes shootingStar3 {{
+      0%, 60% {{ transform: translate(50px, -30px); opacity: 0; }}
+      68% {{ opacity: 0.9; }}
+      92% {{ transform: translate(550px, 220px); opacity: 0; }}
+      100% {{ transform: translate(550px, 220px); opacity: 0; }}
+    }}
+    .shooting-star-1 {{ animation: shootingStar1 8s infinite ease-out; }}
+    .shooting-star-2 {{ animation: shootingStar2 9s infinite ease-out; }}
+    .shooting-star-3 {{ animation: shootingStar3 7s infinite ease-out; }}
   </style>
 
   <rect class="card-bg" x="10" y="10" width="780" height="{svg_height - 20}" />
@@ -406,12 +413,16 @@ badge_svg_content = f"""<svg width="800" height="{svg_height}" viewBox="0 0 800 
   <g clip-path="url(#card-clip)">
     {stars_svg}
     <g class="shooting-star-1">
-      <line x1="0" y1="0" x2="65" y2="32" stroke="url(#star-trail-1)" stroke-width="1.3" stroke-linecap="round" />
+      <line x1="0" y1="0" x2="65" y2="32" stroke="url(#star-trail-1)" stroke-width="1.4" stroke-linecap="round" />
       <circle cx="65" cy="32" r="1.6" fill="#ffffff" />
     </g>
     <g class="shooting-star-2">
-      <line x1="0" y1="0" x2="50" y2="25" stroke="url(#star-trail-2)" stroke-width="1.1" stroke-linecap="round" />
+      <line x1="0" y1="0" x2="50" y2="25" stroke="url(#star-trail-2)" stroke-width="1.2" stroke-linecap="round" />
       <circle cx="50" cy="25" r="1.3" fill="#ffffff" />
+    </g>
+    <g class="shooting-star-3">
+      <line x1="0" y1="0" x2="55" y2="27" stroke="url(#star-trail-1)" stroke-width="1.3" stroke-linecap="round" />
+      <circle cx="55" cy="27" r="1.4" fill="#ffffff" />
     </g>
   </g>
 
@@ -600,13 +611,20 @@ carousel_svg_content = f"""<svg width="800" height="{carousel_height}" viewBox="
       transform-origin: center;
     }}
 
-    @keyframes shootingStarCarousel {{
+    @keyframes shootingStarCarousel1 {{
       0% {{ transform: translate(780px, 20px); opacity: 0; }}
       15% {{ opacity: 0.9; }}
-      60% {{ transform: translate(400px, 300px); opacity: 0; }}
-      100% {{ transform: translate(400px, 300px); opacity: 0; }}
+      60% {{ transform: translate(380px, 310px); opacity: 0; }}
+      100% {{ transform: translate(380px, 310px); opacity: 0; }}
     }}
-    .shooting-star {{ animation: shootingStarCarousel 12s infinite ease-out; }}
+    @keyframes shootingStarCarousel2 {{
+      0%, 40% {{ transform: translate(520px, -20px); opacity: 0; }}
+      52% {{ opacity: 0.85; }}
+      88% {{ transform: translate(120px, 280px); opacity: 0; }}
+      100% {{ transform: translate(120px, 280px); opacity: 0; }}
+    }}
+    .shooting-star-1 {{ animation: shootingStarCarousel1 8s infinite ease-out; }}
+    .shooting-star-2 {{ animation: shootingStarCarousel2 10s infinite ease-out; }}
 
     @keyframes slideCarousel {{
       0%, 20% {{ transform: translateX(0px); }}
@@ -647,9 +665,13 @@ carousel_svg_content = f"""<svg width="800" height="{carousel_height}" viewBox="
 
   <g clip-path="url(#carousel-clip)">
     {carousel_stars_svg}
-    <g class="shooting-star">
-      <line x1="45" y1="-33" x2="0" y2="0" stroke="url(#star-trail-1)" stroke-width="1.2" stroke-linecap="round" />
+    <g class="shooting-star-1">
+      <line x1="45" y1="-33" x2="0" y2="0" stroke="url(#star-trail-1)" stroke-width="1.3" stroke-linecap="round" />
       <circle cx="0" cy="0" r="1.5" fill="#ffffff" />
+    </g>
+    <g class="shooting-star-2">
+      <line x1="45" y1="-33" x2="0" y2="0" stroke="url(#star-trail-1)" stroke-width="1.1" stroke-linecap="round" />
+      <circle cx="0" cy="0" r="1.3" fill="#ffffff" />
     </g>
   </g>
 
@@ -1148,13 +1170,20 @@ walle_stars_svg = "\n    ".join(walle_stars)
 
 walle_card_svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 280" width="100%" height="280">
   <defs>
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cba6f7" />
+      <stop offset="40%" stop-color="#f5c2e7" />
+      <stop offset="75%" stop-color="#fab387" />
+      <stop offset="100%" stop-color="#74c7ec" />
+    </linearGradient>
+
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap');
       
       .card-bg {{
         fill: #11111b;
-        stroke: #313244;
-        stroke-width: 2;
+        stroke: url(#border-grad);
+        stroke-width: 1.75;
         rx: 16px;
       }}
       .badge-title {{
