@@ -219,25 +219,25 @@
     <g transform="translate(0, 0)">
       <circle cx="6" cy="7" r="4" fill="#89b4fa" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">TypeScript</text>
-      <text class="percentage" x="250" y="11">45%</text>
+      <text class="percentage" x="250" y="11">43%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 153px;" x="290" y="3" height="8" rx="4" fill="#89b4fa" width="0" />
+      <rect class="animated-bar" style="--target-width: 146px;" x="290" y="3" height="8" rx="4" fill="#89b4fa" width="0" />
     </g>
     
     <g transform="translate(0, 26)">
       <circle cx="6" cy="7" r="4" fill="#74c7ec" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">Python</text>
-      <text class="percentage" x="250" y="11">29%</text>
+      <text class="percentage" x="250" y="11">31%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 98px;" x="290" y="3" height="8" rx="4" fill="#74c7ec" width="0" />
+      <rect class="animated-bar" style="--target-width: 105px;" x="290" y="3" height="8" rx="4" fill="#74c7ec" width="0" />
     </g>
     
     <g transform="translate(0, 52)">
       <circle cx="6" cy="7" r="4" fill="#a6e3a1" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">Vue</text>
-      <text class="percentage" x="250" y="11">8%</text>
+      <text class="percentage" x="250" y="11">7%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 27px;" x="290" y="3" height="8" rx="4" fill="#a6e3a1" width="0" />
+      <rect class="animated-bar" style="--target-width: 23px;" x="290" y="3" height="8" rx="4" fill="#a6e3a1" width="0" />
     </g>
     
     <g transform="translate(0, 78)">
