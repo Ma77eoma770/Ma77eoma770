@@ -202,7 +202,7 @@
     <text class="section-label" x="0" y="0">✦ ABOUT ME</text>
     <text class="main-title" x="0" y="26">Hi, I'm <tspan class="hero-name">Matteo Logozzi</tspan> 👋</text>
     <text class="sub-stats" x="0" y="58">
-      <tspan fill="#bac2de">Repos:</tspan> <tspan class="stat-val" fill="#89b4fa">9</tspan>
+      <tspan fill="#bac2de">Repos:</tspan> <tspan class="stat-val" fill="#89b4fa">7</tspan>
       <tspan fill="#585b70" dx="10">|</tspan> 
       <tspan fill="#bac2de" dx="10">Stars:</tspan> <tspan class="stat-val" fill="#f9e2af">0</tspan>
       <tspan fill="#585b70" dx="10">|</tspan> 
@@ -219,33 +219,33 @@
     <g transform="translate(0, 0)">
       <circle cx="6" cy="7" r="4" fill="#89b4fa" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">TypeScript</text>
-      <text class="percentage" x="250" y="11">42%</text>
+      <text class="percentage" x="250" y="11">44%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 142px;" x="290" y="3" height="8" rx="4" fill="#89b4fa" width="0" />
+      <rect class="animated-bar" style="--target-width: 149px;" x="290" y="3" height="8" rx="4" fill="#89b4fa" width="0" />
     </g>
     
     <g transform="translate(0, 26)">
       <circle cx="6" cy="7" r="4" fill="#74c7ec" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">Python</text>
-      <text class="percentage" x="250" y="11">33%</text>
+      <text class="percentage" x="250" y="11">34%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 112px;" x="290" y="3" height="8" rx="4" fill="#74c7ec" width="0" />
+      <rect class="animated-bar" style="--target-width: 115px;" x="290" y="3" height="8" rx="4" fill="#74c7ec" width="0" />
     </g>
     
     <g transform="translate(0, 52)">
       <circle cx="6" cy="7" r="4" fill="#a6e3a1" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">Vue</text>
-      <text class="percentage" x="250" y="11">7%</text>
+      <text class="percentage" x="250" y="11">8%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 23px;" x="290" y="3" height="8" rx="4" fill="#a6e3a1" width="0" />
+      <rect class="animated-bar" style="--target-width: 27px;" x="290" y="3" height="8" rx="4" fill="#a6e3a1" width="0" />
     </g>
     
     <g transform="translate(0, 78)">
       <circle cx="6" cy="7" r="4" fill="#fab387" filter="url(#glow-dot)" />
       <text class="skill-text" x="22" y="11">HTML</text>
-      <text class="percentage" x="250" y="11">4%</text>
+      <text class="percentage" x="250" y="11">5%</text>
       <rect class="track" x="290" y="3" width="340" height="8" rx="4" />
-      <rect class="animated-bar" style="--target-width: 13px;" x="290" y="3" height="8" rx="4" fill="#fab387" width="0" />
+      <rect class="animated-bar" style="--target-width: 17px;" x="290" y="3" height="8" rx="4" fill="#fab387" width="0" />
     </g>
     
     <g transform="translate(0, 104)">

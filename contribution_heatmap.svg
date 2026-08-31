@@ -820,7 +820,7 @@
       <rect x="469.2" y="55.2" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w34-d4" />
       <rect x="469.2" y="69.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w34-d5" />
       <rect x="469.2" y="82.8" width="11.5" height="11.5" rx="3.0" fill="#74c7ec" stroke="#89b4fa" stroke-width="0.9" class="cell-w34-d6" />
-      <rect x="483.0" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w35-d0" />
+      <rect x="483.0" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w35-d0" />
       <rect x="483.0" y="13.8" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w35-d1" />
       <rect x="483.0" y="27.6" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w35-d2" />
       <rect x="483.0" y="41.4" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w35-d3" />
@@ -889,12 +889,12 @@
       <rect x="607.2" y="41.4" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w44-d3" />
       <rect x="607.2" y="55.2" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w44-d4" />
       <rect x="607.2" y="69.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w44-d5" />
-      <rect x="607.2" y="82.8" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w44-d6" />
-      <rect x="621.0" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w45-d0" />
+      <rect x="607.2" y="82.8" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w44-d6" />
+      <rect x="621.0" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w45-d0" />
       <rect x="621.0" y="13.8" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w45-d1" />
-      <rect x="621.0" y="27.6" width="11.5" height="11.5" rx="3.0" fill="#74c7ec" stroke="#89b4fa" stroke-width="0.9" class="cell-w45-d2" />
+      <rect x="621.0" y="27.6" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w45-d2" />
       <rect x="621.0" y="41.4" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w45-d3" />
-      <rect x="621.0" y="55.2" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w45-d4" />
+      <rect x="621.0" y="55.2" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w45-d4" />
       <rect x="621.0" y="69.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w45-d5" />
       <rect x="621.0" y="82.8" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w45-d6" />
       <rect x="634.8" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w46-d0" />
@@ -911,13 +911,13 @@
       <rect x="648.6" y="55.2" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w47-d4" />
       <rect x="648.6" y="69.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w47-d5" />
       <rect x="648.6" y="82.8" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w47-d6" />
-      <rect x="662.4" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#74c7ec" stroke="#89b4fa" stroke-width="0.9" class="cell-w48-d0" />
+      <rect x="662.4" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w48-d0" />
       <rect x="662.4" y="13.8" width="11.5" height="11.5" rx="3.0" fill="#a6e3a1" stroke="#94e2d5" stroke-width="0.9" filter="url(#glow-dot)" class="cell-w48-d1" />
-      <rect x="662.4" y="27.6" width="11.5" height="11.5" rx="3.0" fill="#74c7ec" stroke="#89b4fa" stroke-width="0.9" class="cell-w48-d2" />
-      <rect x="662.4" y="41.4" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w48-d3" />
+      <rect x="662.4" y="27.6" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w48-d2" />
+      <rect x="662.4" y="41.4" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w48-d3" />
       <rect x="662.4" y="55.2" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w48-d4" />
-      <rect x="662.4" y="69.0" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w48-d5" />
-      <rect x="662.4" y="82.8" width="11.5" height="11.5" rx="3.0" fill="#45475a" stroke="#585b70" stroke-width="0.9" class="cell-w48-d6" />
+      <rect x="662.4" y="69.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w48-d5" />
+      <rect x="662.4" y="82.8" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w48-d6" />
       <rect x="676.2" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#cba6f7" stroke="#f5c2e7" stroke-width="0.9" filter="url(#glow-dot)" class="cell-w49-d0" />
       <rect x="676.2" y="13.8" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w49-d1" />
       <rect x="676.2" y="27.6" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w49-d2" />
@@ -932,7 +932,8 @@
       <rect x="690.0" y="55.2" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w50-d4" />
       <rect x="690.0" y="69.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w50-d5" />
       <rect x="690.0" y="82.8" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w50-d6" />
-      <rect x="703.8" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w51-d0" />
+      <rect x="703.8" y="0.0" width="11.5" height="11.5" rx="3.0" fill="#cba6f7" stroke="#f5c2e7" stroke-width="0.9" filter="url(#glow-dot)" class="cell-w51-d0" />
+      <rect x="703.8" y="13.8" width="11.5" height="11.5" rx="3.0" fill="#1e1e2e" stroke="#313244" stroke-width="0.9" class="cell-w51-d1" />
       
   </g>
 
